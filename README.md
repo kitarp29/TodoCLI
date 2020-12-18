@@ -1,12 +1,4 @@
-# CoronaSafe Engineering Fellowship Test Problem
-
-Thanks for applying to the CoronaSafe Engineering fellowship!
-
 In this step we want to see how you implement a command-line (CLI) program that lets you manage your todos.
-
-The specification for this problem is written down as tests. Since we haven’t actually implemented anything, the tests are currently failing. You have to solve the problem by implementing the application and getting all the tests to pass.
-
-Here's how it should work when you're done:
 
 [![Todo-CLI](https://res.cloudinary.com/sv-co/image/upload/v1607935139/fullstack-CEF/Todo-CLI/play-video-demo_fp50wp.png)](https://vimeo.com/490621534)
 ## Getting started
@@ -29,27 +21,6 @@ Here's how it should work when you're done:
    ./todo.sh
    ```
 
-## Run Automated Tests
-
-1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
-
-2. Run `npm install` to install all dependencies
-
-3. Create symbolic link to the executable file
-
-   **On Windows:**
-
-   ```
-   > mklink todo todo.bat
-   ```
-
-   **On \*nix:**
-
-   ```
-   $ ln -s todo.sh todo
-   ```
-
-4. Now run `npm test` and you will see all the tests failing. As you fill in each functionality, you can re-run the tests to see them passing one by one.
 
 ## Specification
 
@@ -90,14 +61,14 @@ change light bulb
 Executing the command without any arguments, or with a single argument `help` prints the CLI usage.
 
 ```
-$ ./todo help
+$ todo help
 Usage :-
-$ ./todo add "todo item"  # Add a new todo
-$ ./todo ls               # Show remaining todos
-$ ./todo del NUMBER       # Delete a todo
-$ ./todo done NUMBER      # Complete a todo
-$ ./todo help             # Show usage
-$ ./todo report           # Statistics
+$ todo add "todo item"  # Add a new todo
+$ todo ls               # Show remaining todos
+$ todo del NUMBER       # Delete a todo
+$ todo done NUMBER      # Complete a todo
+$ todo help             # Show usage
+$ todo report           # Statistics
 ```
 
 ### 2. List all pending todos
@@ -105,7 +76,7 @@ $ ./todo report           # Statistics
 Use the `ls` command to see all the todos that are not yet complete. The most recently added todo should be displayed first.
 
 ```
-$ ./todo ls
+$ todo ls
 [2] change light bulb
 [1] water the plants
 ```
@@ -115,7 +86,7 @@ $ ./todo ls
 Use the `add` command. The text of the todo item should be enclosed within double quotes (otherwise only the first word is considered as the todo text, and the remaining words are treated as different arguments).
 
 ```
-$ ./todo add "the thing i need to do"
+$ todo add "the thing i need to do"
 Added todo: "the thing i need to do"
 ```
 
@@ -124,14 +95,14 @@ Added todo: "the thing i need to do"
 Use the `del` command to remove a todo item by its number.
 
 ```
-$ ./todo del 3
+$ todo del 3
 Deleted todo #3
 ```
 
 Attempting to delete a non-existent todo item should display an error message.
 
 ```
-$ ./todo del 5
+$ todo del 5
 Error: todo #5 does not exist. Nothing deleted.
 ```
 
@@ -140,14 +111,14 @@ Error: todo #5 does not exist. Nothing deleted.
 Use the `done` command to mark a todo item as completed by its number.
 
 ```
-$ ./todo done 1
+$ todo done 1
 Marked todo #1 as done.
 ```
 
 Attempting to mark a non-existed todo item as completed will display an error message.
 
 ```
-$ ./todo done 5
+$ todo done 5
 Error: todo #5 does not exist.
 ```
 
@@ -156,10 +127,7 @@ Error: todo #5 does not exist.
 Use the `report` command to see the latest tally of pending and completed todos.
 
 ```
-$ ./todo report
+$ todo report
 dd/mm/yyyy Pending : 1 Completed : 4
 ```
 
-
-## Improving README.md
-If you feel like we are missing out steps, feel free to make a pull request. [Github Repo](https://github.com/nseadlc-2020/package-todo-cli-task)
