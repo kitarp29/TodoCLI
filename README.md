@@ -1,6 +1,6 @@
-In this step we want to see how you implement a command-line (CLI) program that lets you manage your todos.
+# NodeJS-CLI Todo App
+This a project where a ```todo.bat``` file runs my nodejs app and lets users interact with my app.
 
-[![Todo-CLI](https://res.cloudinary.com/sv-co/image/upload/v1607935139/fullstack-CEF/Todo-CLI/play-video-demo_fp50wp.png)](https://vimeo.com/490621534)
 ## Getting started
 
 1. Install Node.js: You need to have npm installed in your computer for this problem. It comes with Node.js and you can get it by installing Node from https://nodejs.org/en/
