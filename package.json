@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "name": "example",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "description": "Thanks for applying to the CoronaSafe Engineering fellowship!",
+  "main": "todo.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
