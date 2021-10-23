@@ -18,10 +18,8 @@ function init(){
 function getData(){
 	//read file contents
 	var contents = fs.readFileSync(TASK_JSON_PATH);
-
 	//parse contents
 	var data = JSON.parse(contents);
-
 	return data;
 }
 
@@ -29,9 +27,7 @@ function getData(){
 function setData(data){
 	//strigify JSON
 	var dataString = JSON.stringify(data);
-
 	//write to  file
-	
 	fs.writeFileSync(TASK_JSON_PATH,dataString);
 }
 
@@ -50,13 +46,10 @@ function usage() {
 function add(task) {
 	//get data
 	var data = getData();
-
 	//add item
 	data.push({task:task,completed:false});
-
 	//set data
 	setData(data);
-
 	//list
 	console.log("Added todo : "+task );
 }
@@ -106,7 +99,7 @@ function list() {
 				console.log("["+i+"] "+ task.task);
 				i++;
 			}
-			// console.log(index+1+"."," ["+(task.completed ? "\x1b[92m✓\x1b[93m" : " ")+"] ",task.task);
+			console.log(index+1+"."," ["+(task.completed ? "\x1b[92m✓\x1b[93m" : " ")+"] ",task.task);
 		});
 		
 	}else{
